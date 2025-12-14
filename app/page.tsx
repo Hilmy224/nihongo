@@ -224,7 +224,7 @@ export default function Home() {
 
         {/* Join the Conversation (refined per design reference) */}
         <section className="py-16 min-h-[920px] bg-stone-50 relative overflow-hidden">
-          <div aria-hidden="true" className="absolute inset-0 -z-10 pointer-events-none">
+          <div aria-hidden="true" className="absolute inset-0 -z-0 pointer-events-none">
             <div className="absolute right-[120px] top-[40px] w-[760px] h-[760px] bg-amber-300 rounded-full blur-[260px] opacity-65 mix-blend-multiply" />
             <div className="absolute left-[-120px] top-[-220px] w-[980px] h-[920px] bg-pink-200 rounded-full blur-[300px] opacity-55 mix-blend-multiply" />
             <div className="absolute right-[60px] top-[-180px] w-[720px] h-[720px] bg-slate-100 rounded-full blur-[260px] opacity-40 mix-blend-overlay" />
@@ -345,27 +345,58 @@ export default function Home() {
         </section>
 
         {/* Why Choose NIHONGO */}
-        <section className="py-16  min-h-[920px] bg-slate-800 text-white relative overflow-hidden">
+        <section className="py-16 min-h-[950px] bg-slate-800 text-white relative overflow-hidden">
           <div aria-hidden="true" className="absolute inset-0 -z-10 pointer-events-none">
             <div className="absolute left-[-200px] top-[-120px] w-[820px] h-[820px] bg-slate-700 rounded-full blur-[260px] opacity-12" />
           </div>
+
           <div className="container mx-auto px-4">
-            <h2 className="mb-6 text-4xl font-bold">Why Choose NIHONGO?</h2>
-            <div className="grid gap-6 md:grid-cols-3">
-              <div className="p-8 bg-white/8 rounded-2xl">
-                <div className="mb-4 w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">{/* Placeholder: Icon */}</div>
-                <div className="text-lg font-medium">Active Communities</div>
-                <div className="text-slate-200 mt-2">Join 10K+ Indonesian J-culture enthusiasts</div>
+            <div className="max-w-5xl mx-auto text-center">
+              <h2 className="mb-6 text-5xl font-bold font-display">Why Choose NIHONGO?</h2>
+              <p className="mb-8 text-2xl text-slate-300">Your Passion. Our Platform. The Indonesian Way.</p>
+            </div>
+
+            <div className="mt-8 grid gap-8 md:grid-cols-3 pt-6">
+              <div className="p-8 bg-white/10 rounded-2xl flex flex-col h-full">
+                <div className="p-4 bg-white/5 rounded-2xl inline-flex items-center justify-center w-18 h-18 mb-4">
+                  <img src="/Users.svg" alt="Users" className="w-9 h-9" />
+                </div>
+                <div className="text-2xl font-display font-semibold">Active Communities</div>
+                <div className="text-slate-300 text-xl mt-2 pb-12">Join 10K+ Indonesian J-culture enthusiasts</div>
               </div>
-              <div className="p-8 bg-white/8 rounded-2xl">
-                <div className="mb-4 w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">{/* Placeholder: Icon */}</div>
-                <div className="text-lg font-medium">Local Jabodetabek Delivery</div>
-                <div className="text-slate-200 mt-2">Fast shipping across Jakarta, Bogor, Depok, Tangerang & Bekasi</div>
+
+              <div className="p-8 bg-white/10 rounded-2xl flex flex-col h-full">
+                <div className="p-4 bg-white/5 rounded-2xl inline-flex items-center justify-center w-18 h-18 mb-6">
+                  <img src="/Truck.svg" alt="Delivery" className="w-9 h-9" />
+                </div>
+                <div className="text-2xl font-display font-semibold">Local Jabodetabek Delivery</div>
+                <div className="text-slate-300 text-xl mt-2 pb-12">Fast shipping across Jakarta, Bogor, Depok, Tangerang & Bekasi</div>
               </div>
-              <div className="p-8 bg-white/8 rounded-2xl">
-                <div className="mb-4 w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">{/* Placeholder: Icon */}</div>
-                <div className="text-lg font-medium">Authentic Merchandise</div>
-                <div className="text-slate-200 mt-2">100% official product, verified and guaranteed</div>
+
+              <div className="p-8 bg-white/10 rounded-2xl flex flex-col h-full">
+                <div className="p-4 bg-white/5 rounded-2xl inline-flex items-center justify-center w-18 h-18 mb-6">
+                  <img src="/Chield_check.svg" alt="Authentic" className="w-9 h-9" />
+                </div>
+                <div className="text-2xl font-display font-semibold">Authentic Merchandise</div>
+                <div className="text-slate-300 text-xl mt-2 pb-12">100% official product, verified and guaranteed</div>
+              </div>
+            </div>
+
+            <div className="mt-8 grid gap-8 md:grid-cols-2">
+              <div className="p-8 bg-white/10 rounded-2xl flex flex-col h-full">
+                <div className="p-4 bg-white/5 rounded-2xl inline-flex items-center justify-center w-18 h-18 mb-6">
+                  <img src="/Calendar2.svg" alt="Events" className="w-9 h-9" />
+                </div>
+                <div className="text-2xl font-display font-semibold">Exclusive Event Access</div>
+                <div className="text-slate-300 text-xl mt-2 pb-12">Early bird tickets and VIP access to major J-culture events</div>
+              </div>
+
+              <div className="p-8 bg-white/10 rounded-2xl flex flex-col h-full">
+                <div className="p-4 bg-white/5 rounded-2xl inline-flex items-center justify-center w-18 h-18 mb-6">
+                  <img src="/Wallet.svg" alt="Payments" className="w-9 h-9" />
+                </div>
+                <div className="text-2xl font-display font-semibold">Flexible Payment Option</div>
+                <div className="text-slate-300 text-xl mt-2 pb-12">Pay with QRIS, GoPay, OVO, DANA, ShopeePay, or any bank transfer</div>
               </div>
             </div>
           </div>
