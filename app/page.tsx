@@ -140,26 +140,36 @@ export default function Home() {
         </section>
 
         {/* Shop Japan's Finest */}
-        <section className="py-16  min-h-[920px] bg-orange-50 relative overflow-hidden">
+        <section className="py-16 min-h-[920px] bg-orange-50 relative overflow-hidden">
           <div aria-hidden="true" className="absolute inset-0 -z-10 pointer-events-none">
             <div className="absolute right-[-80px] top-[-120px] w-[620px] h-[620px] bg-pink-100 rounded-full blur-[200px] opacity-30" />
           </div>
-          <div className="container mx-auto px-4">
-            <h2 className="mb-6 text-4xl font-bold text-stone-900">Shop Japan’s Finest</h2>
-            <p className="mb-8 text-lg text-stone-600">Official items, fast local shipping, zero hassle.</p>
-            <div className="grid gap-6 md:grid-cols-3">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="mb-6 text-5xl font-bold text-stone-900">Shop Japan's Finest Merch</h2>
+            <p className="mb-8 text-2xl pb-9 text-stone-600">Official items, fast local shipping, zero hassle.</p>
+
+            <div className="grid gap-24 md:grid-cols-3 max-w-7xl mx-auto pb-8">
               {[1,2,3].map(i => (
-                <div key={i} className="bg-white rounded-2xl shadow p-4">
-                  <div className="relative h-48 rounded-md overflow-hidden bg-stone-100">
+                <div key={i} className="bg-white rounded-2xl shadow p-6 flex flex-col h-full">
+                  <div className="relative rounded-md overflow-hidden h-64 md:h-72 lg:h-80">
                     <img src="/product_item.png" alt={`Product ${i}`} className="w-full h-full object-cover" />
                   </div>
-                  <div className="mt-4">
-                    <div className="text-lg font-medium text-stone-900">Product Title {i}</div>
-                    <div className="text-sm text-stone-600">IDR 289,000</div>
+
+                  <div className="mt-6 text-left flex flex-col flex-grow">
+                    <div className="text-2xl text-stone-900">Devil Butler with Black Cat Rirakoro Mascot Figure Collection</div>
+                    <div className="text-base font-bold text-black mt-2">IDR 289,000</div>
+                    <div className="mt-auto pt-6">
+                      <Button className="w-full rounded-full px-6 py-3 bg-slate-800 text-white hover:bg-amber-500">Add to Cart</Button>
+                    </div>
                   </div>
-                  {/* Placeholder: Wishlist/Badge icon - TODO: import Heart/Badge icon */}
                 </div>
               ))}
+            </div>
+
+            <div className="mt-8">
+              <Button size="lg" className="text-light text-lg rounded-full px-14 py-6 bg-lime-400 text-slate-800 hover:bg-stone-200">
+                See All Products ➔
+              </Button>
             </div>
           </div>
         </section>
