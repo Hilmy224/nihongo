@@ -96,35 +96,51 @@ export default function Home() {
       {/* Main Content */}
 
         {/* Everything You Need */}
-        <section className="py-16  min-h-[920px] bg-slate-800 text-white relative overflow-hidden">
+        <section className="py-16 min-h-[620px] bg-slate-800 text-white relative overflow-hidden">
           <div aria-hidden="true" className="absolute inset-0 -z-10 pointer-events-none">
             <div className="absolute left-[-120px] top-[-60px] w-[760px] h-[760px] bg-amber-200 rounded-full blur-[220px] opacity-20" />
           </div>
-          <div className="container mx-auto px-4">
-            <h2 className="mb-6 text-4xl font-bold">Everything You Need, All in One Place</h2>
-            <p className="mb-8 text-lg text-slate-200">NIHONGO brings together the best of Japanese pop culture for Indonesian fans</p>
-            <div className="grid gap-8 md:grid-cols-3">
-              <div className="p-8 rounded-2xl bg-white/8">
-                <div className="mb-6 w-14 h-14 rounded-full bg-white/10 flex items-center justify-center">{/* Placeholder: Icon (add later) */}</div>
-                <div className="text-xl font-semibold">Authentic Japanese Merchandise</div>
-                <div className="text-slate-200 mt-2">Official figures, manga, apparel, and collectibles from trusted Japanese vendors.</div>
+          <div className="container mx-auto min-h-3/5 px-4 text-center">
+            <h2 className="mb-6 text-5xl font-bold">Everything You Need, All in One Place</h2>
+            <p className="mb-8 text-xl text-slate-200 pb-8">NIHONGO brings together the best of Japanese pop culture for Indonesian fans</p>
+            
+            
+            <div className="grid gap-38 md:grid-cols-3 flex-col items-stretch">
+              <div className="p-8 rounded-2xl bg-indigo-200 flex flex-col min-h-[440px]">
+                <div className="text-left flex-grow">
+                  <div className="mb-6">
+                    <img src="/shopping_icon.svg" alt="Shopping" className="w-18 h-18" />
+                  </div>
+                  <div className="text-4xl text-black font-semibold font-display">Authentic Japanese Merchandise</div>
+                  <div className="text-slate-500 text-2xl mt-2 py-4">Official figures, manga, apparel, and collectibles from trusted Japanese vendors.</div>
+                </div>
               </div>
-              <div className="p-8 rounded-2xl bg-white/8">
-                <div className="mb-6 w-14 h-14 rounded-full bg-white/10 flex items-center justify-center">{/* Placeholder: Icon (add later) */}</div>
-                <div className="text-xl font-semibold">Event Tickets</div>
-                <div className="text-slate-200 mt-2">Get tickets to anime expos, J-pop concerts, cosplay festivals, and more.</div>
+
+              <div className="p-8 rounded-2xl bg-lime-400 flex flex-col">
+                <div className="text-left flex-grow">
+                  <div className="mb-6">
+                    <img src="/ticket_icon.svg" alt="Tickets" className="w-18 h-18" />
+                  </div>
+                  <div className="text-4xl text-black font-semibold font-display">Event Tickets</div>
+                  <div className="text-slate-500 text-2xl py-4 mt-2">Get tickets to anime expos, J-pop concerts, cosplay festivals, and more.</div>
+                </div>
               </div>
-              <div className="p-8 rounded-2xl bg-white/8">
-                <div className="mb-6 w-14 h-14 rounded-full bg-white/10 flex items-center justify-center">{/* Placeholder: Icon (add later) */}</div>
-                <div className="text-xl font-semibold">Community Forum</div>
-                <div className="text-slate-200 mt-2">Join discussions, share reviews, and connect with Indonesian J-culture fans.</div>
+
+              <div className="p-8 rounded-2xl bg-green-200 flex flex-col">
+                <div className="text-left flex-grow">
+                  <div className="mb-6">
+                    <img src="/forum_icon.svg" alt="Forum" className="w-18 h-18" />
+                  </div>
+                  <h2 className="text-4xl text-black font-semibold font-display">Community Forum</h2>
+                  <div className="text-slate-500 text-2xl py-4 mt-2">Join discussions, share reviews, and connect with Indonesian J-culture fans.</div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Shop Japan's Finest */}
-        <section className="py-16  min-h-[920px] bg-slate-50 relative overflow-hidden">
+        <section className="py-16  min-h-[920px] bg-orange-50 relative overflow-hidden">
           <div aria-hidden="true" className="absolute inset-0 -z-10 pointer-events-none">
             <div className="absolute right-[-80px] top-[-120px] w-[620px] h-[620px] bg-pink-100 rounded-full blur-[200px] opacity-30" />
           </div>
