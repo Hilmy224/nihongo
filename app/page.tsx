@@ -222,32 +222,126 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Join the Conversation */}
-        <section className="py-16  min-h-[920px] bg-stone-50 relative overflow-hidden">
+        {/* Join the Conversation (refined per design reference) */}
+        <section className="py-16 min-h-[920px] bg-stone-50 relative overflow-hidden">
           <div aria-hidden="true" className="absolute inset-0 -z-10 pointer-events-none">
-            <div className="absolute right-[-160px] top-[-60px] w-[520px] h-[520px] bg-amber-100 rounded-full blur-[180px] opacity-20" />
+            <div className="absolute right-[120px] top-[40px] w-[760px] h-[760px] bg-amber-300 rounded-full blur-[260px] opacity-65 mix-blend-multiply" />
+            <div className="absolute left-[-120px] top-[-220px] w-[980px] h-[920px] bg-pink-200 rounded-full blur-[300px] opacity-55 mix-blend-multiply" />
+            <div className="absolute right-[60px] top-[-180px] w-[720px] h-[720px] bg-slate-100 rounded-full blur-[260px] opacity-40 mix-blend-overlay" />
+            <div className="absolute left-[160px] bottom-[-120px] w-[560px] h-[560px] bg-amber-100 rounded-full blur-[220px] opacity-40 mix-blend-screen" />
+            <div className="absolute right-[260px] bottom-[-220px] w-[640px] h-[640px] bg-pink-100 rounded-full blur-[220px] opacity-30 mix-blend-multiply" />
           </div>
-          <div className="container mx-auto px-4">
-            <h2 className="mb-6 text-4xl font-bold text-stone-900">Join the Conversation</h2>
-            <p className="mb-8 text-lg text-stone-700">Connect with thousands of Indonesian fans across topics.</p>
-            <div className="grid gap-6 md:grid-cols-3">
-              <div className="bg-stone-50 rounded-2xl p-8">
-                <div className="mb-6 w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center">{/* Placeholder: Icon/Symbol */}</div>
-                <div className="text-lg font-medium">Anime</div>
-                <div className="text-sm text-stone-600 mt-2">7K members</div>
+
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-5xl mx-auto text-center">
+              <h2 className="mb-6 text-5xl font-bold font-display">Join the Conversation</h2>
+              <p className="mb-8 text-2xl text-stone-700">Connect with thousands of Indonesian fans.</p>
+            </div>
+
+            <div className="mt-8 grid gap-10 md:grid-cols-3 items-stretch">
+              {[
+                { emoji: "🎬", title: "Anime", members: "7K", bg: "bg-amber-100" },
+                { emoji: "📚", title: "Manga", members: "7K", bg: "bg-slate-100" },
+                { emoji: "🎵", title: "J-Pop", members: "7K", bg: "bg-orange-100" }
+              ].map((item, i) => (
+                <div key={i} className={`flex-1 p-6 ${item.bg} rounded-2xl shadow-lg flex flex-col h-80 max-h-50 justify-center items-center`}>
+                  <div className="text-5xl mb-4">{item.emoji}</div>
+                  <div className="text-2xl font-display">{item.title}</div>
+                  <div className="text-base text-stone-700 mt-2">{item.members} members</div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-10 grid gap-10 md:grid-cols-3 items-stretch">
+              {[
+                { emoji: "👘", title: "Cosplay", members: "7K", bg: "bg-amber-100" },
+                { emoji: "🎌", title: "Learn Japanese", members: "7K", bg: "bg-lime-200" },
+                { emoji: "🎮", title: "Gaming", members: "7K", bg: "bg-slate-200" }
+              ].map((item, i) => (
+                <div key={i} className={`flex-1 p-6 ${item.bg} rounded-2xl shadow-lg flex flex-col h-80 max-h-50 justify-center items-center`}>
+                  <div className="text-5xl mb-4">{item.emoji}</div>
+                  <div className="text-2xl font-display">{item.title}</div>
+                  <div className="text-base text-stone-700 mt-2">{item.members} members</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Forum Preview Cards */}
+          <div className="container mx-auto px-4 mt-16 max-w-4xl relative z-0">
+            <div className="flex flex-col gap-9">
+              {/* Card 1 */}
+              <div className="p-7 bg-stone-100 rounded-2xl shadow-md">
+                <div className="flex items-start gap-2.5">
+                  <div className="w-8 h-8 bg-gradient-to-br from-stone-50 to-amber-200 rounded-full flex-shrink-0"></div>
+                  <div className="flex-1 flex flex-col gap-4">
+                    <div className="flex items-center gap-2.5">
+                      <div className="text-black text-base font-medium">ackerman123</div>
+                      <div className="text-stone-500 text-sm">•</div>
+                      <div className="text-stone-500 text-sm">2 hrs ago</div>
+                    </div>
+                    <div className="text-stone-700 text-base leading-6">
+                      Ada yang mau ikut nonton Jujutsu Kaisen: Execution di CGV Margo City weekend ini? Let's go bareng!
+                    </div>
+                    <div className="flex items-center gap-6">
+                      <div className="flex items-center gap-1.5">
+                        {/* thumbs-up icon - replace path */}
+                        <svg className="w-4 h-4 text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                        </svg>
+                        <div className="text-stone-500 text-sm">45</div>
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                        {/* message-square icon - replace path */}
+                        <svg className="w-4 h-4 text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                        <div className="text-stone-500 text-sm">12</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="bg-stone-50 rounded-2xl p-8">
-                <div className="mb-6 w-16 h-16 bg-slate-100 rounded-2xl flex items-center justify-center">{/* Placeholder: Icon/Symbol */}</div>
-                <div className="text-lg font-medium">Manga</div>
-                <div className="text-sm text-stone-600 mt-2">7K members</div>
-              </div>
-              <div className="bg-stone-50 rounded-2xl p-8">
-                <div className="mb-6 w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center">{/* Placeholder: Icon/Symbol */}</div>
-                <div className="text-lg font-medium">J-Pop</div>
-                <div className="text-sm text-stone-600 mt-2">7K members</div>
+
+              {/* Card 2 */}
+              <div className="p-7 bg-stone-100 rounded-2xl shadow-md">
+                <div className="flex items-start gap-2.5">
+                  <div className="w-8 h-8 bg-gradient-to-br from-stone-50 to-amber-200 rounded-full flex-shrink-0"></div>
+                  <div className="flex-1 flex flex-col gap-4">
+                    <div className="flex items-center gap-2.5">
+                      <div className="text-black text-base font-medium">MegumiFushiguro123</div>
+                      <div className="text-stone-500 text-sm">•</div>
+                      <div className="text-stone-500 text-sm">4 hrs ago</div>
+                    </div>
+                    <div className="text-stone-700 text-base leading-6">
+                      Baru beli manga One Piece vol. terbaru di NihonGo! Packagingnya rapi banget 🔥
+                    </div>
+                    <div className="flex items-center gap-6">
+                      <div className="flex items-center gap-1.5">
+                        {/* thumbs-up icon - replace path */}
+                        <svg className="w-4 h-4 text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                        </svg>
+                        <div className="text-stone-500 text-sm">89</div>
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                        {/* message-square icon - replace path */}
+                        <svg className="w-4 h-4 text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                        <div className="text-stone-500 text-sm">24</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <div className="mt-12 flex justify-center">
+              <Button size="lg" className="text-light text-lg rounded-full px-14 py-6 bg-slate-800 text-white hover:bg-lime-200">
+                Visit Forums ➔
+              </Button>
+            </div>
         </section>
 
         {/* Why Choose NIHONGO */}
