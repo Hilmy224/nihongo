@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/card"
 import { ChevronDown, Menu, ChevronLeft, ChevronRight, Facebook, Instagram, Twitter } from "lucide-react"
 import { useState } from "react"
+import SectionWithGrid from "@/components/ui/section-with-grid"
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -23,57 +24,62 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-stone-50">
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-        <div className="container mx-auto flex h-16 items-center justify-between px-4">
-          <div className="text-lg font-semibold text-stone-900">WEBSITE LOGO</div>
-          
-          <nav className="hidden items-center gap-6 md:flex">
-            <a href="#" className="text-sm text-stone-600 hover:text-stone-900">about</a>
-            <a href="#" className="text-sm text-stone-600 hover:text-stone-900">blog</a>
-            
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1 text-sm text-stone-600 hover:text-stone-900">
-                products
-                <ChevronDown className="h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuItem>category 1</DropdownMenuItem>
-                <DropdownMenuItem>category 2</DropdownMenuItem>
-                <DropdownMenuItem>category 3</DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-            
-            <a href="#" className="text-sm text-stone-600 hover:text-stone-900">contact</a>
-          </nav>
+      <header className="sticky top-0 z-50 w-full border-b bg-white/60 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+        <SectionWithGrid sidePaddingPercent={10} cols={23} gridGapClass="gap-x-2" className="h-16" gradientClass="" gradientInside={true}>
+          <div className="container mx-auto flex h-full items-center justify-between px-4">
+            <div className="relative z-10 text-3xl font-display text-stone-900">NIHONGO</div>
 
-          <Button variant="ghost" size="icon" className="md:hidden">
-            <Menu className="h-5 w-5" />
-          </Button>
-        </div>
+            <nav className="hidden items-center gap-8 md:flex font-sans relative z-10 ">
+              <a href="#" aria-current="page" className="text-xl font-bold text-stone-900">Home</a>
+              <a href="#" className="text-xl text-stone-700 hover:text-stone-900">Marketplace</a>
+              <a href="#" className="text-xl text-stone-700 hover:text-stone-900">Events</a>
+              <a href="#" className="text-xl text-stone-700 hover:text-stone-900">Community</a>
+            </nav>
+
+            <div className="flex items-center gap-4 relative z-10">
+              <a href="#" className="hidden text-xl text-stone-700 md:block">Sign In</a>
+              <Button size="sm" className="hidden md:inline-flex rounded-full px-4 py-2 text-xl bg-blue-400 text-white font-sans hover:from-blue-500">
+                Sign Up
+              </Button>
+
+              <Button variant="ghost" size="icon" className="md:hidden">
+                <Menu className="h-5 w-5" />
+              </Button>
+            </div>
+          </div>
+        </SectionWithGrid>
       </header>
-
+      <SectionWithGrid sidePaddingPercent={10} cols={23} gridGapClass="gap-x-2" className="h-[500px] w-full overflow-hidden" evenClass="bg-red-100" oddClass="bg-stone-100" gradientClass="bg-gradient-to-br from-stone-200/30 via-stone-300/20 to-stone-400/30" gradientInside={true}>
       {/* Hero Section */}
-      <section className="relative h-[500px] w-full overflow-hidden bg-gradient-to-br from-stone-200 via-stone-300 to-stone-400">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iYSIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiPjxwYXRoIGQ9Ik0wIDBoMTAwdjEwMEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0yMCAyMGMxMCAxMCAyMCAxMCAzMCAwczIwLTEwIDMwIDBzMjAgMTAgMzAgMCIgc3Ryb2tlPSIjYzhiYThhIiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9Im5vbmUiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNDAwIiBmaWxsPSJ1cmwoI2EpIiBvcGFjaXR5PSIwLjMiLz48L3N2Zz4=')] opacity-20"></div>
-        <div className="container mx-auto flex h-full items-center justify-center px-4">
+      
+      
+        <div className="container mx-auto flex h-full items-center justify-center px-4 relative">
           <div className="text-center">
             <h1 className="mb-6 text-5xl font-bold text-stone-900">start your adventure</h1>
             <Button size="lg" className="bg-stone-800 text-white hover:bg-stone-700">
               sign up now
             </Button>
           </div>
+
+          {/* Hero image (use jap_img.png) */}
+          <div className="hidden lg:block absolute right-10 top-6 z-10">
+            <img src="/jap_img.png" alt="Hero" className="w-[360px] h-[360px] rounded-xl object-cover shadow-md" />
+          </div>
         </div>
-      </section>
+      </SectionWithGrid>
 
       {/* Fold Line */}
-      <div className="border-t-2 border-dashed border-stone-300">
+      <SectionWithGrid sidePaddingPercent={10} cols={23} gridGapClass="gap-x-2" className="border-t-2 border-dashed border-stone-300 py-2" evenClass="bg-red-100" oddClass="bg-stone-100" gradientClass="bg-gradient-to-r from-stone-50/20 to-stone-100/10" gradientInside={true}>
         <div className="container mx-auto px-4 py-2">
           <span className="text-xs text-stone-500">fold</span>
         </div>
-      </div>
+      </SectionWithGrid>
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-12">
+
+      <SectionWithGrid sidePaddingPercent={10} cols={23} gridGapClass="gap-x-2" className="py-12" gradientClass="bg-gradient-to-br from-white/10 to-transparent" gradientInside={true}>
+
+        <main className="container mx-auto px-4">
         <div className="grid gap-8 lg:grid-cols-3">
           {/* Carousel/Slider */}
           <div className="lg:col-span-2">
@@ -164,53 +170,25 @@ export default function Home() {
 
           {/* Cards Grid */}
           <div className="mt-12 grid gap-6 md:grid-cols-3">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-base">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nib.
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-stone-600">
-                  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
-                  consequat.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-base">
-                  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie.
-                  consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan
-                  et iusto odio dignissim qui blandit praesent.
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-stone-600">
-                  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-base">
-                  Euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad.
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-stone-600">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                </CardDescription>
-              </CardContent>
-            </Card>
+            {[1,2,3].map(i => (
+              <div key={i} className="bg-white rounded-2xl shadow p-4">
+                <div className="relative h-48 rounded-md overflow-hidden bg-stone-100">
+                  <img src="/product_item.png" alt={`Product ${i}`} className="w-full h-full object-cover" />
+                </div>
+                <div className="mt-4">
+                  <div className="text-lg font-medium text-stone-900">Product Title {i}</div>
+                  <div className="text-sm text-stone-600">IDR 289,000</div>
+                </div>
+                {/* Placeholder: Wishlist/Badge icon - TODO: import Heart/Badge icon */}
+              </div>
+            ))}
           </div>
         </div>
       </main>
+      </SectionWithGrid>
 
       {/* Footer */}
-      <footer className="mt-16 border-t bg-stone-100">
+      <SectionWithGrid sidePaddingPercent={10} cols={23} gridGapClass="gap-x-2" className="mt-16 border-t bg-stone-100 py-8" evenClass="bg-stone-100" oddClass="bg-stone-50" gradientClass="bg-gradient-to-r from-white/10 to-transparent" gradientInside={true}>
         <div className="container mx-auto px-4 py-8">
           <div className="grid gap-8 md:grid-cols-3">
             <div>
@@ -253,7 +231,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </footer>
+      </SectionWithGrid>
     </div>
   )
 }
