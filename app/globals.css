@@ -33,6 +33,7 @@
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
+  --stay-updated-bg: #e7e0ec;
   --color-destructive: var(--destructive);
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
@@ -53,6 +54,7 @@
 }
 
 :root {
+  .bg-stay-updated { background-color: var(--stay-updated-bg); }
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.147 0.004 49.25);

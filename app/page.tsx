@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Menu, ChevronLeft, ChevronRight, Facebook, Instagram, Twitter, Calendar, MapPin } from "lucide-react"
+import { Menu, ChevronLeft, ChevronRight, Facebook, Instagram, X, Youtube, Calendar, MapPin } from "lucide-react"
 import { useState } from "react"
 
 export default function Home() {
@@ -22,8 +22,8 @@ export default function Home() {
             </nav>
 
             <div className="flex items-center gap-4 relative z-10">
-              <a href="#" className="hidden text-xl text-stone-700 md:block">Sign In</a>
-              <Button size="sm" className="hidden md:inline-flex rounded-full px-4 py-2 text-xl bg-gradient-to-br from-blue-400 to-blue-800 text-white font-sans">
+              <a href="#" className="hidden text-xl text-stone-700 md:block pb-1">Sign In</a>
+              <Button size="sm" className="hidden md:inline-flex rounded-full px-4 py-2 pb-3 text-xl bg-gradient-to-br from-blue-400 to-blue-800 text-white font-sans">
                 Sign Up
               </Button>
 
@@ -58,7 +58,7 @@ export default function Home() {
               <Button size="lg" className="text-light text-lg rounded-full px-22 py-8 bg-stone-900 text-white hover:bg-stone-800">
                 Explore NIHONGO ➔
               </Button>
-              <Button size="lg" className="text-lg  rounded-full px-18 py-8 bg-lime-300  text-black hover:bg-amber-500">
+              <Button size="lg" className="text-lg  rounded-full px-18 py-8 bg-nihongo-green  text-black hover:bg-amber-500">
                 Join Community
               </Button>
             </div>
@@ -116,7 +116,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="p-8 rounded-2xl bg-lime-400 flex flex-col">
+              <div className="p-8 rounded-2xl bg-nihongo-green flex flex-col">
                 <div className="text-left flex-grow">
                   <div className="mb-6">
                     <img src="/ticket_icon.svg" alt="Tickets" className="w-18 h-18" />
@@ -167,7 +167,7 @@ export default function Home() {
             </div>
 
             <div className="mt-8">
-              <Button size="lg" className="text-light text-lg rounded-full px-14 py-6 bg-lime-400 text-slate-800 hover:bg-stone-200">
+              <Button size="lg" className="text-light text-lg rounded-full px-14 py-6 bg-nihongo-green text-slate-800 hover:bg-stone-200">
                 See All Products ➔
               </Button>
             </div>
@@ -403,24 +403,33 @@ export default function Home() {
         </section>
 
         {/* Stay Updated */}
-        <section className="py-16 bg-stone-50 relative overflow-hidden">
-          <div aria-hidden="true" className="absolute inset-0 -z-10 pointer-events-none">
-            <div className="absolute left-[-100px] top-[-140px] w-[600px] h-[600px] bg-pink-50 rounded-full blur-[200px] opacity-20" />
+        <section className="py-16 min-h-[490px] bg-stay-updated relative overflow-hidden">
+          <div aria-hidden="true" className="absolute inset-0 -z-0 pointer-events-none">
+            <img src="/Send_fill.svg" alt="" className="absolute right-16 top-8 w-64 opacity-30 pointer-events-none" />
           </div>
+
           <div className="container mx-auto px-4">
-            <h2 className="mb-6 text-4xl font-bold text-stone-900">Stay Updated!</h2>
-            <p className="mb-8 text-lg text-stone-700">Get the latest news on merch drops, events, and community highlights.</p>
-            <div className="max-w-3xl">
-              <div className="flex gap-4">
-                <input className="flex-1 rounded-xl px-6 py-4 border" placeholder="Enter your email" />
-                <Button className="rounded-xl px-6 py-4 bg-amber-400 text-black">Subscribe</Button>
+            <div className="max-w-6xl mx-auto text-center">
+              <h2 className="mb-6 text-5xl font-display text-stone-900">Stay Updated!</h2>
+              <p className="mb-8 text-2xl text-stone-700">Get the latest news on merch drops, events, and community highlights.</p>
+            </div>
+
+            <div className="flex justify-center mt-6 pt-10">
+              <div className="w-full max-w-4xl inline-flex items-center gap-4">
+                <input aria-label="Email" className="flex-1 rounded-full px-8 py-6 bg-white/80 placeholder:text-stone-500 text-lg border border-stone-200" placeholder="Enter your email" />
+                <Button className="rounded-full px-12 py-8 bg-slate-900 text-white inline-flex items-center gap-3">
+                  <img src="/Send_fill.svg" alt="" className="w-6 h-6" />
+                  <span className="text-lg">Subscribe</span>
+                </Button>
               </div>
             </div>
+
+            <div className="mt-4 text-center text-sm text-stone-600">No spam, just pure J-culture goodness. Unsubscribe anytime.</div>
           </div>
         </section>
 
       {/* Footer */}
-      <footer className="mt-16 relative bg-emerald-300 overflow-hidden">
+      <footer className="relative bg-nihongo-green overflow-hidden">
         <div aria-hidden="true" className="absolute inset-0 -z-10 pointer-events-none">
           <div className="absolute left-[100px] top-[60px] w-[762px] h-[742px] bg-emerald-200 rounded-full blur-[200px] opacity-40" />
           <div className="absolute right-[120px] bottom-[-120px] w-[762px] h-[742px] bg-amber-200 rounded-full blur-[300px] opacity-30" />
@@ -429,48 +438,56 @@ export default function Home() {
           <div className="inline-flex justify-start items-start gap-14 w-full">
             <div className="w-96 inline-flex flex-col justify-start items-start gap-12">
               <div className="flex flex-col gap-5">
-                <div className="text-5xl text-white font-display">NIHONGO</div>
-                <div className="text-xl text-white">Indonesia’s platform for Japanese pop culture enthusiasts. Connect, shop, and explore the best of Japan’s culture right here.</div>
+                <div className="text-5xl text-black font-display">NIHONGO</div>
+                <div className="text-xl text-stone-500">Indonesia’s platform for Japanese pop culture enthusiasts. Connect, shop, and explore the best of Japan’s culture right here.</div>
               </div>
-              <div className="inline-flex gap-7">
-                <div className="w-9 h-9 bg-white/20 rounded flex items-center justify-center">{/* X */}</div>
-                <div className="w-9 h-9 bg-white/20 rounded flex items-center justify-center">{/* YouTube */}</div>
-                <div className="w-9 h-9 bg-white/20 rounded flex items-center justify-center">{/* Instagram */}</div>
+              <div className="inline-flex gap-4">
+                <a href="#" aria-label="X" className="w-9 h-9 bg-white/20 rounded flex items-center justify-center hover:bg-white/30">
+                  <X className="w-5 h-5 text-black" />
+                </a>
+                <a href="#" aria-label="YouTube" className="w-9 h-9 bg-white/20 rounded flex items-center justify-center hover:bg-white/30">
+                  <Youtube className="w-5 h-5 text-black" />
+                </a>
+                <a href="#" aria-label="Instagram" className="w-9 h-9 bg-white/20 rounded flex items-center justify-center hover:bg-white/30">
+                  <Instagram className="w-5 h-5 text-black" />
+                </a>
               </div>
             </div>
             <div className="flex-1 flex gap-7">
-              <div className="w-52 inline-flex flex-col gap-4 text-white">
+              <div className="w-52 inline-flex flex-col gap-4 text-black">
                 <div className="text-3xl font-display">Marketplace</div>
-                <div>All Products</div>
-                <div>Figures & Collectibles</div>
-                <div>Manga</div>
-                <div>Apparel</div>
-                <div>Official Vendors</div>
+                <div className="text-stone-500"> All Products</div>
+                <div className="text-stone-500">Figures & Collectibles</div>
+                <div className="text-stone-500">Manga</div>
+                <div className="text-stone-500">Apparel</div>
+                <div className="text-stone-500">Official Vendors</div>
               </div>
-              <div className="w-52 inline-flex flex-col gap-4 text-white">
+              <div className="w-52 inline-flex flex-col gap-4 text-black">
                 <div className="text-3xl font-display">Events</div>
-                <div>Upcoming Events</div>
-                <div>Anime Conventions</div>
-                <div>J-Pop Concerts</div>
-                <div>Cosplay Festivals</div>
-                <div>Past Events</div>
+                <div className="text-stone-500">Upcoming Events</div>
+                <div className="text-stone-500">Anime Conventions</div>
+                <div className="text-stone-500">J-Pop Concerts</div>
+                <div className="text-stone-500">Cosplay Festivals</div>
+                <div className="text-stone-500">Past Events</div>
               </div>
-              <div className="w-52 inline-flex flex-col gap-4 text-white">
+              <div className="w-52 inline-flex flex-col gap-4 text-black">
                 <div className="text-3xl font-display">Community</div>
                 <div>Forums</div>
                 <div>Topics</div>
               </div>
-              <div className="w-52 inline-flex flex-col gap-4 text-white">
+              <div className="w-52 inline-flex flex-col gap-4 text-black">
                 <div className="text-3xl font-display">Support</div>
-                <div>Help Center</div>
-                <div>Contact Us</div>
-                <div>Shipping Info</div>
-                <div>Payment Methods</div>
-                <div>FAQs</div>
+                <div>
+                <div className="text-stone-500">Help Center</div>
+                <div className="text-stone-500">Contact Us</div>
+                <div className="text-stone-500">Shipping Info</div>
+                <div className="text-stone-500">Payment Methods</div>
+                <div >FAQs</div>
+              </div>
               </div>
             </div>
           </div>
-          <div className="mt-12 flex justify-between items-center text-white text-sm">
+          <div className="mt-12 flex justify-between items-center text-stone-500 text-sm">
             <div>© 2025 NIHONGO. All rights reserved.</div>
             <div className="flex gap-6">
               <div>Privacy Policy</div>
