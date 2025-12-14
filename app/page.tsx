@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Menu, ChevronLeft, ChevronRight, Facebook, Instagram, Twitter } from "lucide-react"
+import { Menu, ChevronLeft, ChevronRight, Facebook, Instagram, Twitter, Calendar, MapPin } from "lucide-react"
 import { useState } from "react"
 
 export default function Home() {
@@ -175,27 +175,49 @@ export default function Home() {
         </section>
 
         {/* Upcoming Japanese Events */}
-        <section className="py-16  min-h-[920px] bg-emerald-100 relative overflow-hidden">
+        <section className="py-16 min-h-[920px] bg-nihongo-green relative overflow-hidden">
           <div aria-hidden="true" className="absolute inset-0 -z-10 pointer-events-none">
-            <div className="absolute left-[-60px] bottom-[-120px] w-[600px] h-[600px] bg-emerald-200 rounded-full blur-[200px] opacity-25" />
+            <div className="absolute left-[-60px] bottom-[-120px] w-[600px] h-[600px] bg-amber-200 rounded-full blur-[200px] opacity-20" />
           </div>
-          <div className="container mx-auto px-4">
-            <h2 className="mb-6 text-4xl font-bold text-stone-900">Upcoming Japanese Events</h2>
-            <p className="mb-8 text-lg text-stone-700">Your easy gateway to the hottest J-culture events in Indonesia.</p>
-            <div className="grid gap-6 md:grid-cols-3">
+          <div className="container mx-auto px-4 text-center text-white">
+            <h2 className="mb-6 text-5xl font-bold text-stone-900">Upcoming Japanese Events</h2>
+            <p className="mb-8 text-2xl pb-9 text-stone-600">Your easy gateway to the hottest J-culture events in Indonesia.</p>
+
+            <div className="grid gap-24 md:grid-cols-3 max-w-8xl mx-auto pb-8">
               {[1,2,3].map(i => (
-                <div key={i} className="bg-white rounded-2xl shadow p-5">
-                  <div className="relative h-44 rounded-md overflow-hidden bg-stone-100 mb-4">
-                    <img src="/event_item.png" alt={`Event ${i}`} className="w-full h-full object-cover" />
+                <div key={i} className="bg-white rounded-2xl shadow p-6 flex flex-col h-full pt-12">
+                  <div className="relative rounded-md overflow-hidden h-64 md:h-72 lg:h-80">
+                    <img src="/event_item.png" alt={`Event ${i}`} className="w-full h-full object-contain" />
                   </div>
-                  <div className="text-lg font-bold">Event Name</div>
-                  <div className="text-sm mt-2 text-stone-600">20 Desember 2025 — ICE BSD, Tangerang</div>
-                  <div className="mt-4 flex items-center gap-3">
-                    <div className="flex-1 text-base font-bold">IDR 150,000</div>
-                    <Button size="sm" className="rounded-full px-4 py-2 bg-stone-900 text-white">Buy Ticket</Button>
+
+                  <div className="mt-6 text-left flex flex-col flex-grow">
+                    <div className="text-2xl font-bold text-black">Event Name</div>
+
+                    <div className="mt-4 text-base text-stone-600 flex items-center gap-3">
+                      <Calendar className="h-5 w-5 text-slate-800" />
+                      <div>20 Desember 2025</div> 
+                    </div>
+
+                    <div className="mt-3 text-base text-stone-600 flex items-center gap-3">
+                      <MapPin className="h-5 w-5 text-slate-800" />
+                      <div>ICE BSD, Tangerang</div>
+                    </div>
+
+                    <div className="mt-auto pt-6 mt-12 border-t border-stone-200">
+                      <div className="flex items-center justify-between gap-4 pt-4">
+                        <div className="text-lg font-bold text-stone-900">IDR 150,000</div>
+                        <Button size="sm" className="rounded-full font-normal px-14 py-4 bg-slate-800 text-slate-200 hover:bg-orange-200">Buy Ticket</Button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-8 pt-4">
+              <Button size="lg" className="text-light text-lg rounded-full px-14 py-6 bg-slate-800 text-white hover:bg-lime-200">
+                See All Events ➔
+              </Button>
             </div>
           </div>
         </section>
