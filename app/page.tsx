@@ -16,14 +16,14 @@ export default function Home() {
 
             <nav className="hidden items-center gap-8 md:flex font-sans absolute left-1/2 -translate-x-1/2 z-10">
               <a href="#" aria-current="page" className="text-xl font-bold text-stone-900">Home</a>
-              <a href="#" className="text-xl text-stone-700 hover:text-stone-900">Marketplace</a>
-              <a href="#" className="text-xl text-stone-700 hover:text-stone-900">Events</a>
-              <a href="#" className="text-xl text-stone-700 hover:text-stone-900">Community</a>
+              <a href="#" className="text-xl text-stone-700 hover:text-indigo-300">Marketplace</a>
+              <a href="#" className="text-xl text-stone-700 hover:text-indigo-300">Events</a>
+              <a href="#" className="text-xl text-stone-700 hover:text-indigo-300">Community</a>
             </nav>
 
             <div className="flex items-center gap-4 relative z-10">
-              <a href="#" className="hidden text-xl text-stone-700 md:block pb-1">Sign In</a>
-              <Button size="sm" className="hidden md:inline-flex rounded-full px-4 py-2 pb-3 text-xl bg-gradient-to-br from-blue-400 to-blue-800 text-white font-sans">
+              <a href="#" className="hidden text-xl text-stone-700 md:block pb-1 hover:text-indigo-300">Sign In</a>
+              <Button size="sm" className="hidden md:inline-flex rounded-full px-4 py-2 pb-3 text-xl bg-gradient-to-br from-blue-400 to-blue-800 text-white font-sans hover:from-indigo-400 hover:to-indigo-800">
                 Sign Up
               </Button>
 
@@ -55,10 +55,10 @@ export default function Home() {
             <h1 className="mb-6 text-7xl font-bold font-display text-stone-900">Dive Into Japan's Pop Culture Universe.</h1>
             <p className="mb-6 text-2xl text-stone-700 w-max-200">Explore authentic merchandise, exclusive events, and vibrant communities — created for fans who live and breathe Japanese culture in Indonesia.</p>
             <div className="flex items-center gap-4">
-              <Button size="lg" className="text-light text-lg rounded-full px-22 py-8 bg-stone-900 text-white hover:bg-stone-800">
+              <Button size="lg" className="text-light text-lg rounded-full px-22 py-8 bg-stone-900 text-white hover:bg-stone-400 hover:text-black hover:outline-solid outline-blue-400">
                 Explore NIHONGO ➔
               </Button>
-              <Button size="lg" className="text-lg  rounded-full px-18 py-8 bg-nihongo-green  text-black hover:bg-amber-500">
+              <Button size="lg" className="text-lg  rounded-full px-18 py-8 bg-nihongo-green  text-black hover:bg-lime-400 hover:outline-solid outline-blue-400">
                 Join Community
               </Button>
             </div>
@@ -159,7 +159,7 @@ export default function Home() {
                     <div className="text-2xl text-stone-900">Devil Butler with Black Cat Rirakoro Mascot Figure Collection</div>
                     <div className="text-base font-bold text-black mt-2">IDR 289,000</div>
                     <div className="mt-auto pt-6">
-                      <Button className="w-full rounded-full px-6 py-3 bg-slate-800 text-white hover:bg-amber-500">Add to Cart</Button>
+                      <Button className="w-full rounded-full px-6 py-4 bg-slate-800 text-white hover:bg-slate-400 hover:text-black hover:outline-solid outline-blue-400">Add to Cart</Button>
                     </div>
                   </div>
                 </div>
@@ -167,7 +167,7 @@ export default function Home() {
             </div>
 
             <div className="mt-8">
-              <Button size="lg" className="text-light text-lg rounded-full px-14 py-6 bg-nihongo-green text-slate-800 hover:bg-stone-200">
+              <Button size="lg" className="text-light text-lg rounded-full px-14 py-6 bg-nihongo-green text-slate-800 hover:bg-lime-400 hover:outline-solid outline-blue-400">
                 See All Products ➔
               </Button>
             </div>
@@ -206,7 +206,7 @@ export default function Home() {
                     <div className="mt-auto pt-6 mt-12 border-t border-stone-200">
                       <div className="flex items-center justify-between gap-4 pt-4">
                         <div className="text-lg font-bold text-stone-900">IDR 150,000</div>
-                        <Button size="sm" className="rounded-full font-normal px-14 py-4 bg-slate-800 text-slate-200 hover:bg-orange-200">Buy Ticket</Button>
+                        <Button size="sm" className="rounded-full font-normal px-14 py-4 bg-slate-800 text-slate-200 hover:bg-slate-500 hover:text-black hover:outline-solid outline-blue-400">Buy Ticket</Button>
                       </div>
                     </div>
                   </div>
@@ -215,7 +215,7 @@ export default function Home() {
             </div>
 
             <div className="mt-8 pt-4">
-              <Button size="lg" className="text-light text-lg rounded-full px-14 py-6 bg-slate-800 text-white hover:bg-lime-200">
+              <Button size="lg" className="text-light text-lg rounded-full px-14 py-6 bg-slate-800 text-white hover:bg-lime-400 hover:outline-solid outline-blue-400 hover:text-black">
                 See All Events ➔
               </Button>
             </div>
@@ -338,7 +338,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-12 flex justify-center">
-              <Button size="lg" className="text-light text-lg rounded-full px-14 py-6 bg-slate-800 text-white hover:bg-lime-200">
+              <Button size="lg" className="text-light text-lg rounded-full px-14 py-6 bg-slate-800 text-white hover:bg-lime-400 hover:outline-solid outline-blue-400 hover:text-black">
                 Visit Forums ➔
               </Button>
             </div>
@@ -417,7 +417,7 @@ export default function Home() {
             <div className="flex justify-center mt-6 pt-10">
               <div className="w-full max-w-4xl inline-flex items-center gap-4">
                 <input aria-label="Email" className="flex-1 rounded-full px-8 py-6 bg-white/80 placeholder:text-stone-500 text-lg border border-stone-200" placeholder="Enter your email" />
-                <Button className="rounded-full px-12 py-8 bg-slate-900 text-white inline-flex items-center gap-3">
+                <Button className="rounded-full px-12 py-8 bg-slate-900 text-white inline-flex items-center gap-3 hover:bg-lime-400 hover:outline-solid outline-blue-400 hover:text-black">
                   <img src="/Send_fill.svg" alt="" className="w-6 h-6" />
                   <span className="text-lg">Subscribe</span>
                 </Button>
